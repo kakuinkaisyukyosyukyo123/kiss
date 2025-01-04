@@ -1,52 +1,51 @@
+/* 基本スタイル */
 body {
     line-height: 1.6;
-    background: linear-gradient(to bottom, #ffffff 80%, #d8d8d8, #7d7d7d, #000000); /* 上白80%、下黒20% */
-    background-attachment: fixed; /* 背景を固定 */
-    background-size: cover; /* 背景画像が画面サイズに合わせて拡大・縮小される */
+    background: linear-gradient(to bottom, #ffffff 80%, #d8d8d8, #7d7d7d, #000000);
+    background-attachment: fixed;
+    background-size: cover;
     color: #333;
     padding: 20px;
-    font-family: 'Hiragino Mincho Pro', serif; /* 明朝体を優先的に指定 */
+    font-family: 'Hiragino Mincho Pro', serif;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden; /* 横スクロール防止 */
+    overflow-x: hidden;
 }
 
 h1 {
     padding: 70px 0;
-    font-size: 1.5em; /* フォントサイズを少し大きく */
+    font-size: 1.5em;
     text-align: center;
 }
 
 /* 基本リンクのスタイル */
 a {
-    color: #f7f7f7; /* 文字色を変更 */
-    padding: 8px 16px; /* 内側の余白 */
-    border-radius: 20px; /* 角を丸くする */
-    text-decoration: none; /* 下線を消す */
-    font-weight: normal; /* 太字を解除 */
-    transition: background-color 0.3s, color 0.3s; /* ホバー時の色変更をスムーズに */
+    color: #f7f7f7;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: normal;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 a.nav-link {
-    color: #000; /* 文字色 */
-    padding: 8px 16px; /* 内側の余白 */
-    border-radius: 20px; /* 角を丸くする */
-    transition: background-image 0.6s ease, color 0.3s, transform 0.3s; /* 背景のぼやけとアニメーション */
-    text-decoration: none; /* 下線を消す */
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background-image 0.6s ease, color 0.3s, transform 0.3s;
+    text-decoration: none;
     position: relative;
 }
 
-/* ホバー時のリンクエフェクト */
 a.nav-link:hover {
-    color: #fff; /* 文字色を白に */
-    background-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0) 80%); /* 強いぼやけ */
-    transform: scale(1.05); /* 少し拡大する */
+    color: #fff;
+    background-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.4) 20%, rgba(0, 0, 0, 0) 80%);
+    transform: scale(1.05);
 }
 
-/* ホバー時のリンク色 */
 a:hover {
-    color: #999;  /* ホバー時の文字色 */
-    text-decoration: underline;  /* ホバー時に下線を表示 */
+    color: #999;
+    text-decoration: underline;
 }
 
 /* ヘッダー */
@@ -54,13 +53,13 @@ header {
     text-align: center;
     margin-bottom: 20px;
     font-weight: bold;
-    font-family: 'Hiragino Mincho Pro', serif; /* 明朝体を適用 */
-    position: fixed; /* 固定 */
+    font-family: 'Hiragino Mincho Pro', serif;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 20px 0;
-    z-index: 10; /* ヘッダーが他の要素より上に表示されるように */
+    z-index: 10;
 }
 
 header h1 {
@@ -74,24 +73,24 @@ header nav a {
     color: #454545;
     text-decoration: none;
     font-weight: normal;
-    padding: 8px 16px;  /* 内側の余白 */
+    padding: 8px 16px;
 }
 
 header nav a:hover {
-    color: #fff; /* 文字色を白に */
-    background-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0) 70%); /* 強いぼやけ */
-    transform: scale(1.05); /* 少し拡大する */
-    text-decoration: none; /* 下線を消す */
+    color: #fff;
+    background-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0) 70%);
+    transform: scale(1.05);
+    text-decoration: none;
 }
 
 /* メインコンテンツ */
 main {
-    flex-grow: 1; /* メインコンテンツが残りのスペースを占める */
+    flex-grow: 1;
     width: 90%;
     max-width: 1200px;
     padding: 70px;
-    text-align: center; /* 中央揃え */
-    overflow-y: auto; /* コンテンツ部分をスクロール可能に */
+    text-align: center;
+    overflow-y: auto;
 }
 
 /* 画像の中央揃え */
@@ -107,38 +106,37 @@ main {
     transition: transform 0.3s ease;
 }
 
-/* 画像ホバー時に水のように動くエフェクト */
 .center-image img:hover {
-    transform: scale(1.05); /* 画像が少し拡大 */
+    transform: scale(1.05);
 }
 
 /* モーダルのスタイル */
 .modal {
-    display: flex; /* 中央配置用 */
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明の黒 */
-    z-index: 1000; /* 他の要素より上に表示 */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
     justify-content: center;
     align-items: center;
 }
 
 footer {
     color: #dcdcdc;
-    font-size: 0.1em;  /* フォントサイズの調整 */
+    font-size: 0.1em;
     text-align: center;
     margin-top: 20px;
     opacity: 0.8;
     font-weight: normal;
-    bottom: 0;  /* 最下部に配置 */
-    position: fixed;  /* フッターを固定 */
-    left: 50%;  /* 横方向の中央に配置 */
-    transform: translateX(-50%);  /* 幅の半分だけ左にシフトさせて中央に配置 */
-    width: auto;  /* 幅を自動に設定 */
-    padding: 10px 0;  /* 内側の余白 */
+    bottom: 0;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 10px 0;
 }
 
 /* 画像のフェードイン効果 */
@@ -151,25 +149,51 @@ footer {
     opacity: 1;
 }
 
-/* Webkit ブラウザ（Chrome, Safari）用 */
+/* スクロールバー */
 ::-webkit-scrollbar {
-    width: 5px;  /* 横スクロールバーの太さ */
-    height: 5px;  /* 横スクロールバーの太さ */
+    width: 5px;
+    height: 5px;
 }
 
-/* スクロールバーのトラック（背景部分） */
 ::-webkit-scrollbar-track {
-    background: #c9c9c9; /* 背景色 */
-    border-radius: 10px;  /* 角を丸く */
+    background: #c9c9c9;
+    border-radius: 10px;
 }
 
-/* スクロールバーのつまみ（ドラッグ部分） */
 ::-webkit-scrollbar-thumb {
-    background: #d1d1d1; /* つまみの色 */
-    border-radius: 10px; /* 角を丸く */
+    background: #d1d1d1;
+    border-radius: 10px;
 }
 
-/* ホバー時のスクロールバーのつまみ */
 ::-webkit-scrollbar-thumb:hover {
-    background: #bebebe; /* ホバー時の色 */
+    background: #bebebe;
+}
+
+/* メディアクエリでスマホ対応 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.2em; /* 小さな画面でフォントサイズを小さく */
+    }
+
+    .center-image img {
+        width: 70%; /* 画像の幅を広げる */
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    main {
+        padding: 20px; /* モバイルでは余白を少なく */
+    }
+
+    footer {
+        font-size: 0.8em; /* フッターの文字サイズ調整 */
+    }
+
+    /* ヘッダーリンクの調整 */
+    header nav a {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
 }
